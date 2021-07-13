@@ -32,6 +32,8 @@ export default function Home() {
 
     var team = chunk(shuffle, totalSize);
 
+    console.log('THE TEAM : ', team)
+
     setState({ ...state, lineUp: team });
 
   }
@@ -46,32 +48,7 @@ export default function Home() {
 
   }
 
-  // function handleClick(e) {
-  //   e.preventDefault()
-  //   console.log(state.name, state.description)
-  //   let data = {
-  //     name: state.name,
-  //     capitals: state.capitals,
-  //     area: state.area,
-  //     description: state.description,
-  //   }
-  //   api
-  //     .addCountry(data)
-  //     .then(result => {
-  //       console.log('SUCCESS!')
-  //       setState({
-  //         name: '',
-  //         capitals: '',
-  //         area: '',
-  //         description: '',
-  //       })
-  //       setMessage(`Your country '${state.name}' has been created`)
-  //       setTimeout(() => {
-  //         setMessage(null)
-  //       }, 2000)
-  //     })
-  //     .catch(err => setState({ message: err.toString() }))
-  // }
+
   return (
     <div className="Home">
       <div className="allPage">
@@ -79,11 +56,12 @@ export default function Home() {
           <h2 className="title">Random Team Generator</h2>
 
           {state.lineUp.map(team => {
+            console.log('FRONT END TEAM: ', team.toStr)
 
             return (
               <div className="row">
                 <div className="col-md-12">
-                  Team : {team}
+                  Team : {team.join()}
                 </div>
               </div>
             )

@@ -16,7 +16,7 @@ function MainNavbar(props) {
         Home
       </NavLink>
       {/* <NavLink to="/countries">Countries</NavLink> */}
-      <NavLink to="/add-country">Add Players</NavLink>
+      {/* <NavLink to="/add-country">Add Players</NavLink> */}
       {/* {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}
       {!api.isLoggedIn() && <NavLink to="/login">Login</NavLink>}
       {api.isLoggedIn() && (
