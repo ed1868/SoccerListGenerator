@@ -17,23 +17,127 @@ $primary: #32c3ff;
 
 // --------------------
 // Style reusable for all components
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 }
 
-.info {
-  margin: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  background-color: #5776e9;
+body {
+  // background-image: linear-gradient(
+  //   to right top,
+  //   #9abbf4,
+  //   #c8a2f1,
+  //   #fe81c6,
+  //   #ff697a,
+  //   #f97712
+  // );
+  // background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+  background-color: #151515;
+  font-family: "Poppins", sans-serif;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+.output {
+  top: 0;
+}
+
+h2, .output {
+  margin: 8px 0;
+}
+
+.allPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.container {
+  background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+  // background-image: linear-gradient(
+  //   to right top,
+  //   #f5b700,
+  //   #dc0073,
+  //   #ff697a,
+  //   #f97712
+  // );
+  padding: 30px;
+  border-radius: 5px;
+}
+
+#myInput {
+  font-size: 1.2em;
+}
+
+textarea, input {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+}
+
+#buttons {
+  width: 100%;
+  background-color: #f5f3ff;
+  padding: 5px;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+#buttons:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.title {
   color: white;
+  width: 100%;
+  font-size: 1.5em;
 }
 
-.info.info-danger {
-  background-color: #e73f3f;
+#reset {
+  width: 100%;
+  background-color: #f5f3ff;
+  padding: 5px;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+
+#reset:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.teams {
+  background-image: linear-gradient(
+    to right top,
+    #f5b700,
+    #dc0073,
+    #ff697a,
+    #f97712
+  );
+  padding: 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2em;
+  transition: all 0.5s ease-out;
+}
+
+p {
+  margin: 15px;
+}
+
+#myInput {
+  color: #111;
 }
 
 // --------------------
@@ -42,14 +146,16 @@ body {
   text-align: center;
 
   .App-logo {
+    
     animation: App-logo-spin infinite 20s linear;
     height: 80px;
   }
 
   .App-header {
-    background-color: $primary;
+    // background-color: $primary;
+    background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
     padding: 20px;
-    color: white;
+    color: #151515;
 
     a {
       color: white;
@@ -58,11 +164,13 @@ body {
     }
 
     a.active {
+      
       font-weight: bold;
     }
   }
 
   .App-title {
+    color:#151515;
     font-size: 1.5em;
   }
 
@@ -83,17 +191,17 @@ body {
 
 // --------------------
 // Style for Home component
-.Home {
-  p {
-    font-size: 1.2em;
-  }
-}
+// .Home {
+//   p {
+//     font-size: 1.2em;
+//   }
+// }
 
-// --------------------
-// Style for Secret component
-.Secret {
-  .result {
-    font-size: 1.2em;
-    color: $primary;
-  }
-}
+// // --------------------
+// // Style for Secret component
+// .Secret {
+//   .result {
+//     font-size: 1.2em;
+//     color: $primary;
+//   }
+// }
