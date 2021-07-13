@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export default function Home() {
   const [state, setState] = useState({
-    players: "Put the name, split it with one comma and one white space (, )",
+    players: "",
     lineUp: [],
     groupSize: ""
   })
@@ -68,15 +68,16 @@ export default function Home() {
           })}
           <textarea
             name="players"
+            placeholder="Put the name, split it with one comma(Eddie,Alain )"
             value={state.players}
             id="myInput"
             cols="30"
             rows="10"
             onChange={handleInputChange}
-            placeholder="Put the name, split it with one comma and one white space (, )"
+            
           ></textarea
           ><br />
-          <input type="number" name="groupSize" placeholder="Group Amount" value={state.groupSize} onChange={handleInputChange} id="numberTeam" />
+          <input type="number" name="groupSize" placeholder="# per Team" value={state.groupSize} onChange={handleInputChange} id="numberTeam" />
           <br />
           <button
             type="button"
@@ -84,7 +85,7 @@ export default function Home() {
             onClick={handleRandomTeamGenerator}
             value="Submit"
           >
-            Shuffle
+            Make Teams
           </button>
         </div>
         <div className="hidden teams">
