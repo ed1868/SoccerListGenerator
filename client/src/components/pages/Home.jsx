@@ -68,7 +68,7 @@ export default function Home() {
           })}
           <textarea
             name="players"
-            placeholder="Put the name, split it with one comma(Eddie,Alain )"
+            placeholder="Put the name, split it with one comma(Eddie,Juan )"
             value={state.players}
             id="myInput"
             cols="30"
