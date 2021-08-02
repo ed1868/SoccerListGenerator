@@ -3,6 +3,10 @@ import React, { useState } from 'react'
 export default function Home() {
   const [state, setState] = useState({
     players: "",
+    teamPlayers: [{
+      playerName: "eddie",
+      playerRanking: "10"
+    }],
     lineUp: [],
     groupSize: ""
   })
@@ -74,7 +78,7 @@ export default function Home() {
             cols="30"
             rows="10"
             onChange={handleInputChange}
-            
+
           ></textarea
           ><br />
           <input type="number" name="groupSize" placeholder="# per Team" value={state.groupSize} onChange={handleInputChange} id="numberTeam" />
