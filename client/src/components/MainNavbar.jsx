@@ -15,6 +15,9 @@ function MainNavbar(props) {
       <NavLink to="/" exact>
         Home
       </NavLink>
+      <NavLink to="/rankInclusiveSort" exact>
+        Rank Inclusive
+      </NavLink>
       {/* <NavLink to="/countries">Countries</NavLink> */}
       {/* <NavLink to="/add-country">Add Players</NavLink> */}
       {/* {!api.isLoggedIn() && <NavLink to="/signup">Signup</NavLink>}

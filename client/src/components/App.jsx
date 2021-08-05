@@ -7,6 +7,7 @@ import AddCountry from './pages/AddCountry'
 import Secret from './pages/Secret'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import RankedTeams from './pages/RankedTeams'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/signup" component={Signup} />
         <Route path="/login" component={Login} />
         <Route path="/secret" component={Secret} />
+        <Route path="/rankInclusiveSort" component={RankedTeams} />
         <Route render={() => <h2>404</h2>} />
       </Switch>
     </div>
