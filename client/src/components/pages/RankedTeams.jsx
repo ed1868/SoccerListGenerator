@@ -6,6 +6,10 @@ export default function RakedTeams() {
     teamPlayers: [{
       playerName: "eddie",
       playerRanking: "10"
+    },
+    {
+      playerName: "juan",
+      playerRanking: "10"
     }],
     lineUp: [],
     groupSize: ""
@@ -52,52 +56,105 @@ export default function RakedTeams() {
 
   }
 
+  function handlePlayerAdd(event) {
+
+    let player = {
+      playerRank: state.playerRank,
+      playerName: state.playerName
+    }
+
+    console.log('THE EVENT : ----', event);
+    console.log('CURRENT PLAYER BEING ADDED :', player)
+
+
+
+  }
+
 
   return (
-    <div className="Home">
-      <div className="allPage">
-        <div className="container">
-          <h2 className="title">Random Team Generator</h2>
+    // <div className="Home">
 
-          {state.lineUp.map(team => {
-            console.log('FRONT END TEAM: ', team.toStr)
+    <div className="container mt-5">
+      <div id="formContainer">
+        <div className="row">
+          <div className="col-md-12">
+            <h3 className="text-white pb-5">Add players and their rankings</h3>
+          </div>
+        </div>
 
-            return (
-              <div className="row">
-                <div className="col-md-12">
-                  Team : {team.join()}
-                </div>
+
+        {state.teamPlayers.map(player => {
+          return (
+            <div className="row">
+              <div className="col-md-6">
+                <p className="text-white borderOutline">{player.playerName}</p>
               </div>
-            )
-          })}
-          <textarea
-            name="players"
-            placeholder="Put the name, split it with one comma(Eddie,Juan )"
-            value={state.players}
-            id="myInput"
-            cols="30"
-            rows="10"
-            onChange={handleInputChange}
+              <div className="col-md-6">
+                <p className="text-white borderOutline">{player.playerRanking}</p>
+              </div>
+            </div>
+          )
+        })}
 
-          ></textarea
-          ><br />
-          <input type="number" name="groupSize" placeholder="# per Team" value={state.groupSize} onChange={handleInputChange} id="numberTeam" />
-          <br />
-          <button
-            type="button"
-            id="buttons"
-            onClick={handleRandomTeamGenerator}
-            value="Submit"
-          >
-            Make Teams
-          </button>
+
+
+        <div className="row">
+          <div className="col-md-6">
+            <input type="text" name="playerName" value={state.playerName} className="form-control" placeholder="Player Name" onChange={handleInputChange} aria-label="First name" />
+          </div>
+          <div class="col-md-6">
+
+            <select id="inputRank" name="playerRank" class="form-select" onChange={handleInputChange}>
+              <option selected>Player Rank</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+
+
+            </select>
+
+
+
+          </div>
+          <div className="row">
+            <div className="col-md-6"></div>
+            <div className="col-md-6">
+              <button
+                type="button"
+                onClick={handlePlayerAdd}
+                value="Add Another Player"
+                className="btn btn-light mt-2"
+              >
+                Add Another Player
+              </button>
+            </div>
+          </div>
+
         </div>
-        <div className="hidden teams">
-          <h2 className="hidden">Team List</h2>
-          <div id="output" className="output"></div>
-          <button id="reset" className="hidden">Restart</button>
+
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <button
+              type="button"
+              id="teamButton"
+              onClick={handleRandomTeamGenerator}
+              value="Submit"
+              className="btn btn-dark"
+            >
+              Make Teams
+            </button>
+          </div>
         </div>
+
+
       </div>
-    </div>
+    </div >
   )
 }

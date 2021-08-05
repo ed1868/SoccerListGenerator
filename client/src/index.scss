@@ -85,6 +85,15 @@ input {
   width: 100%;
 }
 
+.borderOutline{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border:solid 2px black;
+  border-radius: 5px;
+}
+#teamButton{
+  width: 100%;
+}
 #buttons {
   width: 100%;
   background-color: #f5f3ff;
